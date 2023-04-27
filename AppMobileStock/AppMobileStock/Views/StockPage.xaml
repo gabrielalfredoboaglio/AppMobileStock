@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMobileStock.Views.StockPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Stocks" 
+                   FontSize="Large" 
+                   FontAttributes="Bold" 
+                   TextColor="Black" />
+
+            <StackLayout Orientation="Horizontal" 
+                         Padding="10,5,10,5" 
+                         Spacing="10">
+                <Label Text="Id Stock" 
+                       FontSize="Medium" 
+                       TextColor="Black" 
+                       WidthRequest="80"/>
+                <Entry FontSize="Medium"
+                       Placeholder="Enter Stock Id"
+                       TextColor="Black"
+                       WidthRequest="200"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" 
+                         Padding="10,5,10,5" 
+                         Spacing="10">
+                <Label Text="Id Articulo" 
+                       FontSize="Medium" 
+                       TextColor="Black" 
+                       WidthRequest="80"/>
+                <Entry FontSize="Medium"
+                       Placeholder="Enter Articulo Id"
+                       TextColor="Black"
+                       WidthRequest="200"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" 
+                         Padding="10,5,10,5" 
+                         Spacing="10">
+                <Label Text="Id Deposito" 
+                       FontSize="Medium" 
+                       TextColor="Black" 
+                       WidthRequest="80"/>
+                <Entry FontSize="Medium"
+                       Placeholder="Enter Deposito Id"
+                       TextColor="Black"
+                       WidthRequest="200"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" 
+                         Padding="10,5,10,5" 
+                         Spacing="10">
+                <Label Text="Cantidad" 
+                       FontSize="Medium" 
+                       TextColor="Black" 
+                       WidthRequest="80"/>
+                <Entry FontSize="Medium"
+                       Placeholder="Enter Cantidad"
+                       TextColor="Black"
+                       WidthRequest="200"/>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

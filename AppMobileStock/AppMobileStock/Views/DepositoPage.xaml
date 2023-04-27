@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMobileStock.Views.DepositoPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Depósitos"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   TextColor="Black" />
+
+            <StackLayout Orientation="Vertical">
+                <Label Text="Id"
+                       FontSize="Medium"
+                       TextColor="Black"
+                       WidthRequest="50" />
+                <Label Text="Nombre"
+                       FontSize="Medium"
+                       TextColor="Black"
+                       WidthRequest="150" />
+                <Label Text="Capacidad"
+                       FontSize="Medium"
+                       TextColor="Black"
+                       WidthRequest="100" />
+                <Label Text="Dirección"
+                       FontSize="Medium"
+                       TextColor="Black"
+                       WidthRequest="200" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
