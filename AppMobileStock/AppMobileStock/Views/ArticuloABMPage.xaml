@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMobileStock.Views.ArticuloABMPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Nombre" TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                   
+                HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="txtNombre"  Placeholder="Escriba aqui" PlaceholderColor="Gray"></Entry>
+           
+            
+            <Label Text="Marca" TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                   
+                HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="txtMarca"  Placeholder="Escriba aqui" PlaceholderColor="Gray"></Entry>
+           
+            
+            <Label Text="MinimoStock" TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                   
+                HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="txtMinimoStock"  Placeholder="Escriba aqui" PlaceholderColor="Gray"></Entry>
+
+            <Label Text="Proveedor" TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                   
+                HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="txtProveedor"  Placeholder="Escriba aqui" PlaceholderColor="Gray"></Entry>
+
+            <Label Text="Precio" TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                   
+                HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="txtPrecio"  Placeholder="Escriba aqui" PlaceholderColor="Gray"></Entry>
+
+            <Label Text="Codigo" TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                   
+                HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="txtCodigo"  Placeholder="Escriba aqui" PlaceholderColor="Gray"></Entry>
+
+            <Button Text="Agregar" TextColor="White" BackgroundColor="Blue" Clicked="Button_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

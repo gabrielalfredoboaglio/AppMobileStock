@@ -8,9 +8,15 @@
                    FontSize="Large" 
                    FontAttributes="Bold" 
                    TextColor="Black" />
-
+            <Button Text ="agregar articulo "
+                    TextColor="white"
+                    BackgroundColor="blue" 
+                    Clicked="Button_Clicked"
+                    ></Button>
             <StackLayout>
-                <Label Text="Id" 
+
+               
+                    <Label Text="Id" 
                        FontSize="Medium" 
                        TextColor="Black" />
                 <Label Text="Nombre" 
