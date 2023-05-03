@@ -18,7 +18,7 @@ namespace AppMobileStock.Models
 
         public string Codigo { get; set; }
 
-        
+       
     }
 }
 

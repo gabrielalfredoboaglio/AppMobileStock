@@ -13,31 +13,6 @@
                     BackgroundColor="blue" 
                     Clicked="Button_Clicked"
                     ></Button>
-            <StackLayout>
-
-               
-                    <Label Text="Id" 
-                       FontSize="Medium" 
-                       TextColor="Black" />
-                <Label Text="Nombre" 
-                       FontSize="Medium" 
-                       TextColor="Black" />
-                <Label Text="Marca" 
-                       FontSize="Medium" 
-                       TextColor="Black" />
-                <Label Text="MinimoStock" 
-                       FontSize="Medium" 
-                       TextColor="Black" />
-                <Label Text="Proveedor" 
-                       FontSize="Medium" 
-                       TextColor="Black" />
-                <Label Text="Precio" 
-                       FontSize="Medium" 
-                       TextColor="Black" />
-                <Label Text="Codigo" 
-                       FontSize="Medium" 
-                       TextColor="Black" />
-            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

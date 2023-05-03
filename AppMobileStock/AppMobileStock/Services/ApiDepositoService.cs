@@ -5,47 +5,36 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using static System.Net.WebRequestMethods;
 
 namespace AppMobileStock.Services
 {
-    public class ApiArticuloService
+    public class ApiDepositoService
     {
-
         public HttpClient Client { get; set; }
-
         public string URL { get; set; }
-
         public string ErrorLog { get; set; }
 
-
-        public ApiArticuloService()
+        public ApiDepositoService()
         {
-
             var httpClientHandler = new HttpClientHandler();
-
             httpClientHandler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => { return true; };
-
             this.Client = new HttpClient(httpClientHandler);
-
-            this.URL = "https://192.168.0.185:45460/api/Articulo";
+            this.URL = "https://192.168.0.185:45458/api/Deposito";
         }
 
-
-        public async Task<ArticuloDTO> SendArticulo(ArticuloDTO articuloDTO)
+        public async Task<DepositoDTO> SendDeposito(DepositoDTO depositoDTO)
         {
             try
             {
                 var httpClientHandler = new HttpClientHandler();
-                httpClientHandler.ServerCertificateCustomValidationCallback =
-                    (message, cert, chain, errors) => { return true; };
+                httpClientHandler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => { return true; };
 
                 using (HttpClient client = new HttpClient(httpClientHandler))
                 {
                     string url = this.URL;
                     client.DefaultRequestHeaders.Accept.TryParseAdd("application/json");
 
-                    string content = JsonConvert.SerializeObject(articuloDTO);
+                    string content = JsonConvert.SerializeObject(depositoDTO);
 
                     StringContent body = new StringContent(content, Encoding.UTF8, "application/json");
 
@@ -57,7 +46,7 @@ namespace AppMobileStock.Services
                     {
                         if (data != null && data.Trim().StartsWith("{") && data.Trim().EndsWith("}"))
                         {
-                            var datos = JsonConvert.DeserializeObject<ArticuloDTO>(data);
+                            var datos = JsonConvert.DeserializeObject<DepositoDTO>(data);
                             return datos;
                         }
                         else
@@ -70,13 +59,11 @@ namespace AppMobileStock.Services
                     {
                         return null;
                     }
-
                 }
             }
             catch (HttpRequestException ex)
             {
                 ErrorLog = $"Error de solicitud HTTP: {ex.Message}. Detalles: {ex.InnerException?.Message}";
-
                 return null;
             }
             catch (JsonReaderException ex)
@@ -97,3 +84,4 @@ namespace AppMobileStock.Services
         }
     }
 }
+

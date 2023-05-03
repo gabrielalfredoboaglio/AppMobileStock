@@ -8,25 +8,12 @@
                    FontSize="Large"
                    FontAttributes="Bold"
                    TextColor="Black" />
-
-            <StackLayout Orientation="Vertical">
-                <Label Text="Id"
-                       FontSize="Medium"
-                       TextColor="Black"
-                       WidthRequest="50" />
-                <Label Text="Nombre"
-                       FontSize="Medium"
-                       TextColor="Black"
-                       WidthRequest="150" />
-                <Label Text="Capacidad"
-                       FontSize="Medium"
-                       TextColor="Black"
-                       WidthRequest="100" />
-                <Label Text="Dirección"
-                       FontSize="Medium"
-                       TextColor="Black"
-                       WidthRequest="200" />
-            </StackLayout>
+            <Button Text ="agregar deposito "
+                    TextColor="white"
+                    BackgroundColor="blue" 
+                   Clicked="Button_Clicked"
+                    ></Button>
+           
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

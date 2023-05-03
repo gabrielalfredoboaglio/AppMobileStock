@@ -11,17 +11,17 @@ using Xamarin.Forms.Xaml;
 
 namespace AppMobileStock.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ArticuloABMPage : ContentPage
-	{
-		public ArticuloABMPage ()
-		{
-			InitializeComponent ();
-		}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class ArticuloABMPage : ContentPage
+    {
+        public ArticuloABMPage()
+        {
+            InitializeComponent();
+        }
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-               try
+            try
             {
                 ArticuloDTO articuloDTOAAgregar = new ArticuloDTO();
                 articuloDTOAAgregar.Nombre = txtNombre.Text;
