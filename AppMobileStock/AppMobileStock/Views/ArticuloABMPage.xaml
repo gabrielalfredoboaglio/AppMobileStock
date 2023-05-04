@@ -8,41 +8,67 @@
                 VerticalOptions="CenterAndExpand" 
                    
                 HorizontalOptions="CenterAndExpand" />
-            <Entry x:Name="txtNombre"  Placeholder="Escriba aqui" PlaceholderColor="Gray"></Entry>
+            <Entry x:Name="txtNombre"  Placeholder="Escriba aqui" PlaceholderColor="Gray" 
+                   Text="{Binding ArticuloDTO.Nombre}"></Entry>
            
             
             <Label Text="Marca" TextColor="Black"
                 VerticalOptions="CenterAndExpand" 
                    
                 HorizontalOptions="CenterAndExpand" />
-            <Entry x:Name="txtMarca"  Placeholder="Escriba aqui" PlaceholderColor="Gray"></Entry>
+            <Entry x:Name="txtMarca"  Placeholder="Escriba aqui" PlaceholderColor="Gray"
+                    Text="{Binding ArticuloDTO.Marca}"></Entry>
            
             
             <Label Text="MinimoStock" TextColor="Black"
                 VerticalOptions="CenterAndExpand" 
                    
                 HorizontalOptions="CenterAndExpand" />
-            <Entry x:Name="txtMinimoStock"  Placeholder="Escriba aqui" PlaceholderColor="Gray"></Entry>
+            <Entry x:Name="txtMinimoStock"  Placeholder="Escriba aqui" PlaceholderColor="Gray" 
+                   Text="{Binding ArticuloDTO.MinimoStock}"></Entry>
 
             <Label Text="Proveedor" TextColor="Black"
                 VerticalOptions="CenterAndExpand" 
                    
                 HorizontalOptions="CenterAndExpand" />
-            <Entry x:Name="txtProveedor"  Placeholder="Escriba aqui" PlaceholderColor="Gray"></Entry>
+            <Entry x:Name="txtProveedor"  Placeholder="Escriba aqui" PlaceholderColor="Gray"
+                    Text="{Binding ArticuloDTO.Proveedor}"
+                   
+                   ></Entry>
 
             <Label Text="Precio" TextColor="Black"
                 VerticalOptions="CenterAndExpand" 
                    
                 HorizontalOptions="CenterAndExpand" />
-            <Entry x:Name="txtPrecio"  Placeholder="Escriba aqui" PlaceholderColor="Gray"></Entry>
+            <Entry x:Name="txtPrecio"  Placeholder="Escriba aqui" PlaceholderColor="Gray"
+                   Text="{Binding ArticuloDTO.Precio}"
+                   ></Entry>
 
             <Label Text="Codigo" TextColor="Black"
                 VerticalOptions="CenterAndExpand" 
                    
                 HorizontalOptions="CenterAndExpand" />
-            <Entry x:Name="txtCodigo"  Placeholder="Escriba aqui" PlaceholderColor="Gray"></Entry>
+            <Entry x:Name="txtCodigo"  Placeholder="Escriba aqui" PlaceholderColor="Gray"
+                    Text="{Binding ArticuloDTO.Codigo}"
+                   ></Entry>
+            <Label Text="Origen" TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                   
+                HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="txtOrigen"  Placeholder="Escriba aqui" PlaceholderColor="Gray"
+                    Text="{Binding ArticuloDTO.Origen}"
+                   ></Entry>
 
-            <Button Text="Agregar" TextColor="White" BackgroundColor="Blue" Clicked="Button_Clicked"></Button>
+            <Label Text="Mensaje" TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                   
+                HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="txtMensaje"  Placeholder="Escriba aqui" PlaceholderColor="Gray"
+                    Text="{Binding ArticuloDTO.Mensaje}"
+                   ></Entry>
+
+
+            <Button Text="Agregar" TextColor="White" BackgroundColor="Blue" Command="{Binding Agregar}"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
