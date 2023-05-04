@@ -85,7 +85,7 @@ namespace AppMobileStock.Views
                     }
                     else
                     {
-                        await DisplayAlert("Mensaje", "Stock agregado correctamente.", "OK");
+                        await DisplayAlert("Mensaje", "Stock Quitado correctamente.", "OK");
                     }
                 }
             }

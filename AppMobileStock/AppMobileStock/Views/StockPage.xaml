@@ -8,9 +8,9 @@
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
 
-            <Button Text="Agregar Stock" TextColor="White" BackgroundColor="Blue" Clicked="Button_Clicked"></Button>
+            <Button Text="Agregar Stock O Egresar Stock" TextColor="White" BackgroundColor="Blue" Clicked="Button_Clicked"></Button>
 
-            <Button Text="Egresar Stock" TextColor="White" BackgroundColor="Blue" Clicked="Button_Clicked_1"></Button>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

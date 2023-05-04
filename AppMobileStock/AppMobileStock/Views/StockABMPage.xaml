@@ -8,19 +8,19 @@
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
 
-            <Entry x:Name="txtCodigo" Placeholder="Escriba aqui"></Entry>
+            <Entry x:Name="txtCodigo" Placeholder="Por favor ingrese el Codigo Asignado al Articulo "></Entry>
 
             <Label Text="IdDeposito"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
 
-            <Entry x:Name="txtIdDeposito" Placeholder="Escriba aqui"></Entry>
+            <Entry x:Name="txtIdDeposito" Placeholder="Por favor ingrese el Numero De ID Del Deposito "></Entry>
 
             <Label Text="Cantidad"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
 
-            <Entry x:Name="txtCantidad" Placeholder="Escriba aqui"></Entry>
+            <Entry x:Name="txtCantidad" Placeholder="Ingresa la cantidad de stock"></Entry>
             
             <Button Text="Agregar" TextColor="White" BackgroundColor="blue" Clicked="Button_Clicked"></Button>
 
