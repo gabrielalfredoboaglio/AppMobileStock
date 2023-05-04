@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMobileStock.Views.StockABMPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="CodigoArticulo"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Entry x:Name="txtCodigo" Placeholder="Escriba aqui"></Entry>
+
+            <Label Text="IdDeposito"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Entry x:Name="txtIdDeposito" Placeholder="Escriba aqui"></Entry>
+
+            <Label Text="Cantidad"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Entry x:Name="txtCantidad" Placeholder="Escriba aqui"></Entry>
+            
+            <Button Text="Agregar" TextColor="White" BackgroundColor="blue" Clicked="Button_Clicked"></Button>
+
+            <Button Text="Egreso" TextColor="White" BackgroundColor="blue" Clicked="Button_Clicked_1"></Button>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

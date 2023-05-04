@@ -4,63 +4,13 @@
              x:Class="AppMobileStock.Views.StockPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Stocks" 
-                   FontSize="Large" 
-                   FontAttributes="Bold" 
-                   TextColor="Black" />
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
 
-            <StackLayout Orientation="Horizontal" 
-                         Padding="10,5,10,5" 
-                         Spacing="10">
-                <Label Text="Id Stock" 
-                       FontSize="Medium" 
-                       TextColor="Black" 
-                       WidthRequest="80"/>
-                <Entry FontSize="Medium"
-                       Placeholder="Enter Stock Id"
-                       TextColor="Black"
-                       WidthRequest="200"/>
-            </StackLayout>
+            <Button Text="Agregar Stock" TextColor="White" BackgroundColor="Blue" Clicked="Button_Clicked"></Button>
 
-            <StackLayout Orientation="Horizontal" 
-                         Padding="10,5,10,5" 
-                         Spacing="10">
-                <Label Text="Id Articulo" 
-                       FontSize="Medium" 
-                       TextColor="Black" 
-                       WidthRequest="80"/>
-                <Entry FontSize="Medium"
-                       Placeholder="Enter Articulo Id"
-                       TextColor="Black"
-                       WidthRequest="200"/>
-            </StackLayout>
-
-            <StackLayout Orientation="Horizontal" 
-                         Padding="10,5,10,5" 
-                         Spacing="10">
-                <Label Text="Id Deposito" 
-                       FontSize="Medium" 
-                       TextColor="Black" 
-                       WidthRequest="80"/>
-                <Entry FontSize="Medium"
-                       Placeholder="Enter Deposito Id"
-                       TextColor="Black"
-                       WidthRequest="200"/>
-            </StackLayout>
-
-            <StackLayout Orientation="Horizontal" 
-                         Padding="10,5,10,5" 
-                         Spacing="10">
-                <Label Text="Cantidad" 
-                       FontSize="Medium" 
-                       TextColor="Black" 
-                       WidthRequest="80"/>
-                <Entry FontSize="Medium"
-                       Placeholder="Enter Cantidad"
-                       TextColor="Black"
-                       WidthRequest="200"/>
-            </StackLayout>
-
+            <Button Text="Egresar Stock" TextColor="White" BackgroundColor="Blue" Clicked="Button_Clicked_1"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
