@@ -11,10 +11,10 @@ namespace AppMobileStock.Models
 
         public string Marca { get; set; }
 
-        public decimal MinimoStock { get; set; }
+        public decimal? MinimoStock { get; set; }
         public string Proveedor { get; set; }
 
-        public decimal Precio { get; set; }
+        public decimal? Precio { get; set; }
 
         public string Codigo { get; set; }
 

@@ -42,8 +42,9 @@ namespace AppMobileStock.ViewModels
         #region Constructor
        public ArticuloABMViewModel()
         {
-            ArticuloDTO = new ArticuloDTO();    
+            ArticuloDTO = new ArticuloDTO() ;    
             Title = $"Articulos";
+          
         }
 
         #endregion
