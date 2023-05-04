@@ -24,18 +24,7 @@
                 HorizontalOptions="CenterAndExpand" />
             <Entry x:Name="txtDireccion"  Placeholder="Escriba aqui" PlaceholderColor="Gray" Text="{Binding DepositoDTO.Direccion}"></Entry>
 
-            <Label Text="Origen" TextColor="Black"
-                VerticalOptions="CenterAndExpand" 
-                   
-                HorizontalOptions="CenterAndExpand" />
-            <Entry x:Name="txtOrigen"  Placeholder="Escriba aqui" PlaceholderColor="Gray" Text="{Binding DepositoDTO.Origen}"></Entry>
-            
-            
-            <Label Text="Mensaje" TextColor="Black"
-                VerticalOptions="CenterAndExpand" 
-                   
-                HorizontalOptions="CenterAndExpand" />
-            <Entry x:Name="txtMensaje"  Placeholder="Escriba aqui" PlaceholderColor="Gray" Text="{Binding DepositoDTO.Mensaje}"></Entry>
+           
 
             <Button Text="Agregar" TextColor="White" BackgroundColor="Blue" Command="{Binding Agregar}"></Button>
         </StackLayout>

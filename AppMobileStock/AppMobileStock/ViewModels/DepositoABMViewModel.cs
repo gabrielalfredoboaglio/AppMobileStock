@@ -60,8 +60,10 @@ namespace AppMobileStock.ViewModels
         {
             try
             {
+               
                 ApiDepositoService apiDepositoService = new ApiDepositoService();
-
+                DepositoDTO.Mensaje = "";
+                DepositoDTO.Origen = "";
                 DepositoDTO = await apiDepositoService.SendDeposito(DepositoDTO);
 
                 if (DepositoDTO.HuboError)

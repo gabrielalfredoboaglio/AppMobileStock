@@ -67,7 +67,8 @@ namespace AppMobileStock.ViewModels
             try
             {
                 ApiArticuloService apiArticuloService = new ApiArticuloService();
-
+                ArticuloDTO.Mensaje = "";
+                ArticuloDTO.Origen = "";
                 ArticuloDTO = await apiArticuloService.SendArticulo(ArticuloDTO);
 
                 if (ArticuloDTO.HuboError)

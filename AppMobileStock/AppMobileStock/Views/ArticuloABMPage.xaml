@@ -51,21 +51,6 @@
             <Entry x:Name="txtCodigo"  Placeholder="Escriba aqui" PlaceholderColor="Gray"
                     Text="{Binding ArticuloDTO.Codigo}"
                    ></Entry>
-            <Label Text="Origen" TextColor="Black"
-                VerticalOptions="CenterAndExpand" 
-                   
-                HorizontalOptions="CenterAndExpand" />
-            <Entry x:Name="txtOrigen"  Placeholder="Escriba aqui" PlaceholderColor="Gray"
-                    Text="{Binding ArticuloDTO.Origen}"
-                   ></Entry>
-
-            <Label Text="Mensaje" TextColor="Black"
-                VerticalOptions="CenterAndExpand" 
-                   
-                HorizontalOptions="CenterAndExpand" />
-            <Entry x:Name="txtMensaje"  Placeholder="Escriba aqui" PlaceholderColor="Gray"
-                    Text="{Binding ArticuloDTO.Mensaje}"
-                   ></Entry>
 
 
             <Button Text="Agregar" TextColor="White" BackgroundColor="Blue" Command="{Binding Agregar}"></Button>
