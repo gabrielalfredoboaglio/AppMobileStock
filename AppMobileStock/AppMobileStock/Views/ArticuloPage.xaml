@@ -2,17 +2,23 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppMobileStock.Views.ArticuloPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Articulos" 
-                   FontSize="Large" 
-                   FontAttributes="Bold" 
-                   TextColor="Black" />
-            <Button Text ="agregar articulo "
-                    TextColor="white"
-                    BackgroundColor="blue" 
-                    Clicked="Button_Clicked"
-                    ></Button>
-        </StackLayout>
-    </ContentPage.Content>
+    <StackLayout>
+        <ActivityIndicator
+            IsEnabled="{Binding IsBusy}"
+            IsRunning="{Binding IsBusy}"
+            IsVisible="{Binding IsBusy}"
+            Color="Black"/>
+
+        <Button Text="Agregar artículo"
+            TextColor="White"
+            BackgroundColor="Blue"/>
+
+        <CollectionView ItemsSource="{Binding Articulos}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding Nombre}" />
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
 </ContentPage>

@@ -95,5 +95,102 @@ namespace AppMobileStock.Services
                 return null;
             }
         }
+
+        public async Task<List<ArticuloDTO>> GetArticulos()
+        {
+            try
+            {
+
+                var httpClientHandler = new HttpClientHandler();
+                httpClientHandler.ServerCertificateCustomValidationCallback =
+                    (message, cert, chain, errors) => { return true; };
+
+                using (HttpClient client = new HttpClient(httpClientHandler))
+                {
+                    string url = $"{this.URL}";
+
+                    ErrorLog += $"Inicio Get order con url {url}";
+
+                    client.DefaultRequestHeaders.Accept.TryParseAdd("application/json");
+
+                    HttpResponseMessage response = await client.GetAsync(url);
+
+                    ErrorLog += $"Hice gET aSYNC";
+
+                    string data = await response.Content.ReadAsStringAsync();
+
+                    if (response.IsSuccessStatusCode)
+                    {
+
+                        ErrorLog += $"Recibi data";
+                        var datos = JsonConvert.DeserializeObject<List<ArticuloDTO>>(data);
+                        return datos;
+                    }
+                    else
+                    {
+                        ErrorLog += $"Recibi Errpr";
+                        return null;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                ErrorLog += $"Error ejecutando get {ex.Message}";
+                return null;
+
+            }
+        }
+
+        public async Task<ArticuloDTO> GetArticuloById(int id)
+        {
+            try
+            {
+
+                var httpClientHandler = new HttpClientHandler();
+                httpClientHandler.ServerCertificateCustomValidationCallback =
+                    (message, cert, chain, errors) => { return true; };
+
+                using (HttpClient client = new HttpClient(httpClientHandler))
+                {
+                    string url = $"{this.URL}/{id}";    
+
+                    ErrorLog += $"Inicio Get order con url {url}";
+
+                    client.DefaultRequestHeaders.Accept.TryParseAdd("application/json");
+
+                    HttpResponseMessage response = await client.GetAsync(url);
+
+                    ErrorLog += $"Hice gET aSYNC";
+
+                    string data = await response.Content.ReadAsStringAsync();
+
+                    if (response.IsSuccessStatusCode)
+                    {
+
+                        ErrorLog += $"Recibi data";
+                        var datos = JsonConvert.DeserializeObject<ArticuloDTO>(data);
+                        return datos;
+                    }
+                    else
+                    {
+                        ErrorLog += $"Recibi Errpr";
+                        return null;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                ErrorLog += $"Error ejecutando get {ex.Message}";
+                return null;
+
+            }
+
+
+        }
+
+
+
     }
 }
+            
+
