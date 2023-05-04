@@ -23,17 +23,13 @@ namespace AppMobileStock.Views
             viewModel.Navigation = Navigation;
             BindingContext = viewModel; 
         }
-
-       
+    
         protected override async void OnAppearing()
 
         {
             await viewModel.LoadArticulos();
 
         }
-        //private void Button_Clicked(object sender, EventArgs e)
-        //{
-        //    Navigation.PushAsync(new ArticuloABMPage());
-        //}
+       
     }
 }

@@ -28,7 +28,7 @@ namespace AppMobileStock.Services
 
             this.Client = new HttpClient(httpClientHandler);
 
-            this.URL = "https://192.168.0.185:45457/api/Articulo";
+            this.URL = "https://192.168.0.185:45458/api/Articulo";
         }
 
 

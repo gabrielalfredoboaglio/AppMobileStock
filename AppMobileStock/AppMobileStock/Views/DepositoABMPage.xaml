@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMobileStock.Views.DepositoABMPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Nombre" TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                   
+                HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="txtNombre"  Placeholder="Escriba aqui" PlaceholderColor="Gray" Text="{Binding DepositoDTO.Nombre}"></Entry>
+
+
+            <Label Text="Capacidad" TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                   
+                HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="txtCapacidad"  Placeholder="Escriba aqui" PlaceholderColor="Gray" Text="{Binding DepositoDTO.Capacidad}"></Entry>
+
+
+            <Label Text="Direccion" TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                   
+                HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="txtDireccion"  Placeholder="Escriba aqui" PlaceholderColor="Gray" Text="{Binding DepositoDTO.Direccion}"></Entry>
+
+            <Label Text="Origen" TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                   
+                HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="txtOrigen"  Placeholder="Escriba aqui" PlaceholderColor="Gray" Text="{Binding DepositoDTO.Origen}"></Entry>
+            
+            
+            <Label Text="Mensaje" TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                   
+                HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="txtMensaje"  Placeholder="Escriba aqui" PlaceholderColor="Gray" Text="{Binding DepositoDTO.Mensaje}"></Entry>
+
+            <Button Text="Agregar" TextColor="White" BackgroundColor="Blue" Command="{Binding Agregar}"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

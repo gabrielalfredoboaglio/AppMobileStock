@@ -11,8 +11,10 @@
 
         <Button Text="Agregar artículo"
             TextColor="White"
-            BackgroundColor="Blue"/>
-
+            
+            BackgroundColor="Blue"
+            Command="{Binding NuevoArticulo}"/>
+            
         <CollectionView ItemsSource="{Binding Articulos}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>

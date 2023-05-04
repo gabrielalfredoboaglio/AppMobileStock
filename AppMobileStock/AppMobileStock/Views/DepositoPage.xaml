@@ -4,16 +4,24 @@
              x:Class="AppMobileStock.Views.DepositoPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Depósitos"
-                   FontSize="Large"
-                   FontAttributes="Bold"
-                   TextColor="Black" />
-            <Button Text ="agregar deposito "
-                    TextColor="white"
-                    BackgroundColor="blue" 
-                   Clicked="Button_Clicked"
-                    ></Button>
-           
+            <ActivityIndicator
+            IsEnabled="{Binding IsBusy}"
+            IsRunning="{Binding IsBusy}"
+            IsVisible="{Binding IsBusy}"
+            Color="Black"/>
+
+            <Button Text="Agregar deposito"
+            TextColor="White"
+           Command="{Binding NuevoDeposito}"
+            BackgroundColor="Blue"/>
+
+            <CollectionView ItemsSource="{Binding Depositos}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding Nombre}" />
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
