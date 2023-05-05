@@ -86,7 +86,7 @@ namespace AppMobileStock.Services
 
 
 
-        public async Task<IngresoStockDTO> SendEgresoStock(IngresoStockDTO IngresoStockDTO)
+        public async Task<EgresoStockDTO> SendEgresoStock(EgresoStockDTO EgresoStockDTO)
         {
             {
                 try
@@ -99,7 +99,7 @@ namespace AppMobileStock.Services
                         string url = "https://192.168.0.185:45457/api/Stock/EgresoStock";
                         client.DefaultRequestHeaders.Accept.TryParseAdd("application/json");
 
-                        string content = JsonConvert.SerializeObject(IngresoStockDTO);
+                        string content = JsonConvert.SerializeObject(EgresoStockDTO);
 
                         StringContent body = new StringContent(content, Encoding.UTF8, "application/json");
 
@@ -111,7 +111,7 @@ namespace AppMobileStock.Services
                         {
                             if (data != null && data.Trim().StartsWith("{") && data.Trim().EndsWith("}"))
                             {
-                                var datos = JsonConvert.DeserializeObject<IngresoStockDTO>(data);
+                                var datos = JsonConvert.DeserializeObject<EgresoStockDTO>(data);
                                 return datos;
                             }
                             else

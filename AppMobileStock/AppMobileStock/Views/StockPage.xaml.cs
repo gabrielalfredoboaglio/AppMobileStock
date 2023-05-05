@@ -26,5 +26,10 @@ namespace AppMobileStock.Views
         {
             Navigation.PushAsync(new StockABMPage());
         }
+
+        private void Button_Clicked_2(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new EgresoStockABMPage());
+        }
     }
 }

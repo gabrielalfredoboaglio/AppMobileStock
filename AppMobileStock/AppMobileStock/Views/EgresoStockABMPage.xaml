@@ -1,6 +1,7 @@
-﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppMobileStock.Views.StockABMPage">
+             x:Class="AppMobileStock.Views.EgresoStockABMPage">
     <ContentPage.Content>
         <StackLayout VerticalOptions="FillAndExpand"
                      HorizontalOptions="CenterAndExpand">
@@ -10,7 +11,7 @@
 
             <Entry x:Name="txtCodigo" 
                    Placeholder="Ingrese el codigo del articulo" 
-                   Text="{Binding IngresoStockDTO.CodigoArticulo}"
+                   Text="{Binding EgresoStockDTO.CodigoArticulo}"
                    VerticalOptions="FillAndExpand"
                    HorizontalOptions="FillAndExpand"></Entry>
 
@@ -33,20 +34,19 @@
 
             <Entry x:Name="txtCantidad" 
                    Placeholder="Ingresa la cantidad de stock" 
-                   Text="{Binding IngresoStockDTO.Cantidad}"
+                   Text="{Binding EgresoStockDTO.Cantidad}"
                    VerticalOptions="FillAndExpand"
                    HorizontalOptions="FillAndExpand"></Entry>
 
+           
             <Button Text="Agregar" 
                     TextColor="White" 
                     BackgroundColor="blue" 
-                    Command="{Binding Agregar}"
+                    Command="{Binding Egreso}"
                     VerticalOptions="FillAndExpand"
                     HorizontalOptions="FillAndExpand"></Button>
-          
 
 
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
-

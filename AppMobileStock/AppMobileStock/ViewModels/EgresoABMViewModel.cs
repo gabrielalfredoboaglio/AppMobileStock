@@ -2,28 +2,27 @@
 using AppMobileStock.Services;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace AppMobileStock.ViewModels
 {
-    public class StockABMViewModel : BaseViewModel
+          public class EgresoABMViewModel: BaseViewModel
     {
 
         #region Properties
-       
+
 
         public INavigation Navigation { get; set; }
 
         ApiStockService apiStockService = new ApiStockService();
-       public IngresoStockDTO IngresoStockDTO
+        public EgresoStockDTO EgresoStockDTO
         {
-            get => GetPropertyValue<IngresoStockDTO>();
+            get => GetPropertyValue<EgresoStockDTO>();
             set => SetPropertyValue(value);
         }
-      
+
 
 
         public string CodeRead
@@ -42,14 +41,14 @@ namespace AppMobileStock.ViewModels
 
         #region Constructor
 
-        public StockABMViewModel()
-        {   
-      
+        public EgresoABMViewModel()
+        {
 
-            IngresoStockDTO = new IngresoStockDTO();
+
+            EgresoStockDTO = new EgresoStockDTO();
             Title = $"Depositos";
-            IngresoStockDTO.Mensaje = "";
-            IngresoStockDTO.Origen = "";
+            EgresoStockDTO.Mensaje = "";
+            EgresoStockDTO.Origen = "";
             LoadDepositos();
             SeleccioneDepositoCommand = new Command<DepositoDTO>(SeleccioneDeposito);
         }
@@ -58,14 +57,14 @@ namespace AppMobileStock.ViewModels
 
         #region Commands
 
-        public Command Agregar
+        public Command Egreso
         {
             get
             {
-                return new Command(async () => await AgregarStock());
+                return new Command(async () => await Egresotock());
             }
         }
-      
+
 
         public Command<DepositoDTO> SeleccioneDepositoCommand { get; set; }
 
@@ -73,20 +72,20 @@ namespace AppMobileStock.ViewModels
 
         #region Methods
 
-        public async Task AgregarStock()
+        public async Task Egresotock()
         {
             try
             {
                 ApiStockService apiStockService = new ApiStockService();
-                IngresoStockDTO = await apiStockService.SendStock(IngresoStockDTO);
+                EgresoStockDTO = await apiStockService.SendEgresoStock(EgresoStockDTO);
 
-                if (IngresoStockDTO.HuboError)
+                if (EgresoStockDTO.HuboError)
                 {
-                    await Application.Current.MainPage.DisplayAlert("Error", " Ocurrio un error " + IngresoStockDTO.Mensaje, "OK");
+                    await Application.Current.MainPage.DisplayAlert("Error", " Ocurrio un error " + EgresoStockDTO.Mensaje, "OK");
                 }
                 else
                 {
-                    await Application.Current.MainPage.DisplayAlert("Exito", IngresoStockDTO.Mensaje, "OK");
+                    await Application.Current.MainPage.DisplayAlert("Exito", EgresoStockDTO.Mensaje, "OK");
                 }
             }
             catch (Exception ex)
@@ -96,7 +95,7 @@ namespace AppMobileStock.ViewModels
         }
 
 
-       
+
 
         private async Task LoadDepositos()
         {
@@ -128,20 +127,21 @@ namespace AppMobileStock.ViewModels
             set
             {
                 SetProperty(ref _selectedDeposito, value);
-                IngresoStockDTO.IdDeposito = _selectedDeposito.Id;
+                EgresoStockDTO.IdDeposito = _selectedDeposito.Id;
             }
         }
 
         private void SeleccioneDeposito(DepositoDTO deposito)
         {
-            IngresoStockDTO.IdDeposito = deposito.Id;
+            EgresoStockDTO.IdDeposito = deposito.Id;
         }
 
-     
+
 
 
         #endregion
 
     }
 }
+
 
