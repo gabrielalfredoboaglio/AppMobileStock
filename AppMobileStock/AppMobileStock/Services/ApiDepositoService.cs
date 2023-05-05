@@ -19,7 +19,7 @@ namespace AppMobileStock.Services
             var httpClientHandler = new HttpClientHandler();
             httpClientHandler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => { return true; };
             this.Client = new HttpClient(httpClientHandler);
-            this.URL = "https://192.168.0.185:45456/api/Deposito";
+            this.URL = "https://192.168.0.185:45457/api/Deposito";
         }
 
         public async Task<DepositoDTO> SendDeposito(DepositoDTO depositoDTO)
@@ -127,7 +127,7 @@ namespace AppMobileStock.Services
 
             }
         }
-        public async Task<DepositoDTO> GetArticuloById(int id)
+        public async Task<DepositoDTO> GetDepositoById(int id)
         {
             try
             {

@@ -1,31 +1,57 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppMobileStock.Views.StockABMPage">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout VerticalOptions="FillAndExpand"
+                     HorizontalOptions="CenterAndExpand">
             <Label Text="CodigoArticulo"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" />
 
-            <Entry x:Name="txtCodigo" Placeholder="Por favor ingrese el Codigo Asignado al Articulo "></Entry>
+            <Entry x:Name="txtCodigo" 
+                   Placeholder="Por favor ingrese el Codigo Asignado al Articulo " 
+                   Text="{Binding IngresoStockDTO.CodigoArticulo}"
+                   VerticalOptions="FillAndExpand"
+                   HorizontalOptions="FillAndExpand"></Entry>
 
             <Label Text="IdDeposito"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" />
 
-            <Entry x:Name="txtIdDeposito" Placeholder="Por favor ingrese el Numero De ID Del Deposito "></Entry>
+            <StackLayout VerticalOptions="FillAndExpand"
+                         HorizontalOptions="FillAndExpand">
+                <Label Text="Seleccione el depósito" />
+                <Picker ItemsSource="{Binding ListaDepositos}" 
+                        SelectedItem="{Binding SelectedDeposito}"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand">
+                    <Picker.ItemDisplayBinding>
+                        <Binding Path="Nombre" />
+                    </Picker.ItemDisplayBinding>
+                </Picker>
+            </StackLayout>
 
-            <Label Text="Cantidad"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="txtCantidad" 
+                   Placeholder="Ingresa la cantidad de stock" 
+                   Text="{Binding IngresoStockDTO.Cantidad}"
+                   VerticalOptions="FillAndExpand"
+                   HorizontalOptions="FillAndExpand"></Entry>
 
-            <Entry x:Name="txtCantidad" Placeholder="Ingresa la cantidad de stock"></Entry>
-            
-            <Button Text="Agregar" TextColor="White" BackgroundColor="blue" Clicked="Button_Clicked"></Button>
+            <Button Text="Agregar" 
+                    TextColor="White" 
+                    BackgroundColor="blue" 
+                    Command="{Binding Agregar}"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"></Button>
 
-            <Button Text="Egreso" TextColor="White" BackgroundColor="blue" Clicked="Button_Clicked_1"></Button>
-            
+            <Button Text="Egreso" 
+                    TextColor="White" 
+                    BackgroundColor="blue"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Command="{Binding Egreso}"></Button>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
+

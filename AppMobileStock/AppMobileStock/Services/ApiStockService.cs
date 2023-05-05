@@ -20,7 +20,7 @@ namespace AppMobileStock.Services
             var httpClientHandler = new HttpClientHandler();
             httpClientHandler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => { return true; };
             this.Client = new HttpClient(httpClientHandler);
-            this.URL = "https://192.168.0.185:45457/api/Stock/IngresarStock";
+            this.URL = "https://192.168.0.185:45457/api/Stock/IngresarStock/";
         }
 
         public async Task<IngresoStockDTO> SendStock(IngresoStockDTO ingresoStockDTO)
@@ -86,7 +86,7 @@ namespace AppMobileStock.Services
 
 
 
-        public async Task<EgresoStockDTO> SendEgresoStock(EgresoStockDTO egresoStockDTO)
+        public async Task<IngresoStockDTO> SendEgresoStock(IngresoStockDTO IngresoStockDTO)
         {
             {
                 try
@@ -99,7 +99,7 @@ namespace AppMobileStock.Services
                         string url = "https://192.168.0.185:45457/api/Stock/EgresoStock";
                         client.DefaultRequestHeaders.Accept.TryParseAdd("application/json");
 
-                        string content = JsonConvert.SerializeObject(egresoStockDTO);
+                        string content = JsonConvert.SerializeObject(IngresoStockDTO);
 
                         StringContent body = new StringContent(content, Encoding.UTF8, "application/json");
 
@@ -111,7 +111,7 @@ namespace AppMobileStock.Services
                         {
                             if (data != null && data.Trim().StartsWith("{") && data.Trim().EndsWith("}"))
                             {
-                                var datos = JsonConvert.DeserializeObject<EgresoStockDTO>(data);
+                                var datos = JsonConvert.DeserializeObject<IngresoStockDTO>(data);
                                 return datos;
                             }
                             else
